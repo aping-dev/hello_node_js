@@ -1,9 +1,7 @@
 deployScripts:
   start:
-    - nginx -s reload
-    - PATH=/usr/local/node/bin:$PATH node hello.js
+    - pm2 start hello.js --name hello
   restart:
-    - killall node
-    - PATH=/usr/local/node/bin:$PATH node hello.js
+    - pm2 restart hello
   delete:
-    - killall node
+    - pm2 stop hello

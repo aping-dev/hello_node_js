@@ -1,0 +1,8 @@
+deployScripts:
+  start:
+    - PATH=/usr/local/node/bin:$PATH node hello.js
+  restart:
+    - killall node
+    - PATH=/usr/local/node/bin:$PATH node hello.js
+  delete:
+    - killall node

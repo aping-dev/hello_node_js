@@ -3,5 +3,5 @@ deployScripts:
     - pm2 start hello.js --name hello
   restart:
     - pm2 restart hello
-  delete1:
+  delete:
     - pm2 stop hello
